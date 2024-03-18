@@ -19,8 +19,15 @@ public class Instagram
     ArrayList <Page> pages = new ArrayList<Page>();
 
 
-
     ArrayList  <Personnage>   suivi_e_s = new ArrayList<Personnage>();
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     private String username;
     private Personnage personnage;

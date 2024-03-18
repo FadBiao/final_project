@@ -1,10 +1,6 @@
 package in.at.anime;
 
-import in.at.Message;
 import in.at.instagram.Instagram;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Personnage
 {
@@ -17,7 +13,7 @@ public class Personnage
 
     private Instagram compte;
 
-    private List<Message> boiteDeReception;
+    /*private List<Message> boiteDeReception;*/
 
    /* public Personnage(String nom, int age, Anime anime, int force, Instagram compte) {
         this.nom = nom;
@@ -40,17 +36,10 @@ public class Personnage
         this.force = force;
         compte = null;
         anime.ajouterPersonnage(this);
-        this.boiteDeReception = new ArrayList<>();
+        /*this.boiteDeReception = new ArrayList<>();*/
     }
 
-    public void envoyerMessage(Personnage destinataire, String contenu) {
-        Message message = new Message(this, destinataire, contenu);
-        destinataire.recevoirMessage(message);
-    }
 
-    public void recevoirMessage(Message message) {
-        boiteDeReception.add(message);
-    }
     public void majStatutPrincipal() {
         estPrincipal = this.equals(anime.getPersoPr());
         if (estPrincipal) {
