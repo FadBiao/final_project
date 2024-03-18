@@ -16,7 +16,7 @@ public class Instagram
 {
     // instance variables - replace the example below with your own
 
-    ArrayList <Page> pages = new ArrayList<Page>();
+    public ArrayList <Page> pages = new ArrayList<Page>();
 
 
     ArrayList  <Personnage>   suivi_e_s = new ArrayList<Personnage>();
