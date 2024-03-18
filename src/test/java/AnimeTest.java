@@ -14,6 +14,9 @@ public class AnimeTest {
     public void setUp() {
         System.out.println("setUpWell");
 
+        narutoAnime = new Anime("Naruto",1999 );
+        narutoPersonnage = new Personnage("Naruto-->Uzumaki (:)", 12,  narutoAnime, 500);
+
     }
 
     @AfterEach
@@ -22,12 +25,12 @@ public class AnimeTest {
 
     }
     @Test
-    public void testcreeCompte() {
+    public void testCreeCompte() {
         // Test pour vérifier l'âge de l'anime en 2020
         String expectedUserName = "naruto_konoha"; // 2020 - 2002
+        narutoPersonnage.creeCompte("naruto_konoha");
         String actualUserName = narutoPersonnage.getCompte().getUsername();
-
-        assertEquals("L'âge calculé de l'anime Naruto devrait être 18 en 2020.", expectedUserName, actualUserName);
+        assertEquals("naruto_konoha", expectedUserName, actualUserName);
     }
 
 
